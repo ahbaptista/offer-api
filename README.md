@@ -1,9 +1,13 @@
 # Offer-api
 
 Description
+
 Offer api provides endpoints for creation, list and deletion of offers.
+
 A valid offer request is based on OfferDto.java
+
 Database is an h2 in memory
+
 Using spock framework for end-to-end tests
 
 Quick start
