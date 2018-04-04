@@ -6,6 +6,6 @@ VOLUME ["/deploy/application"]
 
 WORKDIR /deploy/application
 
-ADD offer-api .
+ADD . .
 
 ENTRYPOINT ["mvn","clean","package"]
