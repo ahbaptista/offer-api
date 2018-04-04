@@ -3,11 +3,12 @@ de {
 
    stage('Clone Repository') {
         // Get some code from a GitHub repository
-        git 'https://github.com/denisdbell/spring-petclinic.git'
+        git 'https://github.com/ahbaptista/offer-api.git'
     
    }
    stage('Build Maven Image') {
-        docker.build("maven-build }
+        docker.build("maven-build 
+   }
    
    stage('Run Maven Container') {
        
@@ -23,7 +24,7 @@ de {
          //Remove maven-build-container if it exisits
         sh " docker rm -f java-deploy-container"
        
-        sh "docker run --name java-deploy-container --volumes-from maven-build-container -d -p 8080:8080 denisdbell/petclinic-deploy"
+        sh "docker run --name java-deploy-container --volumes-from maven-build-container -d -p 8080:8080 deploy/offer-api"      
    }
 
 }
